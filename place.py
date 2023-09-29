@@ -9,7 +9,7 @@ pixels_per_sq_in = 300
 def resize_image(input_path, output_path, target_width=(12 * pixels_per_sq_in), target_height=(16 * pixels_per_sq_in)):
     img = Image.open(input_path)
     
-    # Resize the image to the target dimensions while preserving the aspect ratio
+    # resize the image to the target dimensions
     img = img.resize((target_width, target_height), Image.ANTIALIAS)
     
     img.save(output_path, "PNG")
